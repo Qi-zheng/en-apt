@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.en.room.repository.CitiesDAO" >
+	<select id="findRoom" resultType="com.en.room.entity.Cities">
+		SELECT id, name ,
+		ST_Distance_Sphere(ST_GeomFromText('POINT(106.5791350000 29.5051870000)',4326),the_geom) as dis 
+		FROM cities order by dis asc limit 2;
+	</select>
+</mapper>
