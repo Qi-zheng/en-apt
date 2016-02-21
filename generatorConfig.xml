@@ -1,0 +1,196 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE generatorConfiguration PUBLIC "-//mybatis.org//DTD MyBatis Generator Configuration 1.0//EN" "http://mybatis.org/dtd/mybatis-generator-config_1_0.dtd" >
+<generatorConfiguration >
+	<classPathEntry location="C:\Users\Administrator\.m2\repository\mysql\mysql-connector-java\5.1.38\mysql-connector-java-5.1.38.jar"/>
+  <context id="context1" >
+    <jdbcConnection driverClass="com.mysql.jdbc.Driver" connectionURL="jdbc:mysql://10.238.18.81:3306/en_room" userId="root" password="123456" />
+    <javaModelGenerator targetPackage="com.en.room.entity" targetProject="us-apt\src\main\java" >
+   		<property name="enableSubPackages" value="true"/>  
+        <property name="trimStrings" value="true"/>
+    </javaModelGenerator>
+    <sqlMapGenerator targetPackage="com.en.room.mapping" targetProject="us-apt\src\main\java" >
+    	 <property name="enableSubPackages" value="true"/>  
+    </sqlMapGenerator>
+    <javaClientGenerator targetPackage="com.en.room.repository" targetProject="us-apt\src\main\java" type="XMLMAPPER" />
+    <table tableName="en_admin" domainObjectName="Admin"
+    	enableSelectByExample="false"  
+        enableDeleteByExample="false"  
+        enableCountByExample="false"  
+        enableUpdateByExample="false">
+        <property name="rootClass" value="com.dicp.web.from.BaseVo"/>
+        <columnOverride column="aid" property="a_i"/>
+        <columnOverride column="loginname" property="l_g_n"/>
+        <columnOverride column="apwd" property="a_p_w"/>
+        <columnOverride column="aname" property="a_n_a"/>
+        <columnOverride column="createtime" property="c_t"/>
+        <columnOverride column="astatus" property="a_s_t"/>
+        <columnOverride column="logintime" property="l_g_t"/>
+    </table>
+      
+    <table tableName="en_city_dic" domainObjectName="CityDic"
+    	enableSelectByExample="false"  
+        enableDeleteByExample="false"  
+        enableCountByExample="false"  
+        enableUpdateByExample="false">
+        <property name="rootClass" value="com.dicp.web.from.BaseVo"/>
+        <columnOverride column="cdid" property="c_d_i"/>
+        <columnOverride column="cname" property="c_n_a"/>
+        <columnOverride column="ccid" property="c_c_i"/>
+    </table>
+    
+    <table tableName="en_country_dic" domainObjectName="CountryDic"
+    	enableSelectByExample="false"  
+        enableDeleteByExample="false"  
+        enableCountByExample="false"  
+        enableUpdateByExample="false">
+        <property name="rootClass" value="com.dicp.web.from.BaseVo"/>
+        <columnOverride column="ccid" property="c_c_i"/>
+        <columnOverride column="cname" property="c_n_a"/>
+    </table>
+    
+    <table tableName="en_landlord" domainObjectName="Landlord"
+    	enableSelectByExample="false"  
+        enableDeleteByExample="false"  
+        enableCountByExample="false"  
+        enableUpdateByExample="false">
+        <property name="rootClass" value="com.dicp.web.from.BaseVo"/>
+        <columnOverride column="lid" property="l_i"/>
+        <columnOverride column="lname" property="l_n_a"/>
+        <columnOverride column="llogo" property="l_l_o"/>
+        <columnOverride column="llanguage" property="l_l_a"/>
+        <columnOverride column="lintroduce" property="l_i_n"/>
+    </table>
+    
+    <table tableName="en_room_base_info" domainObjectName="RoomBaseInfo"
+    	enableSelectByExample="false"  
+        enableDeleteByExample="false"  
+        enableCountByExample="false"  
+        enableUpdateByExample="false">
+        <property name="rootClass" value="com.dicp.web.from.BaseVo"/>
+        <columnOverride column="rbiid" property="r_b_i"/>
+        <columnOverride column="cdid" property="c_d_i"/>
+        <columnOverride column="ccid" property="c_c_i"/>
+        <columnOverride column="sdid" property="s_d_i"/>
+        <columnOverride column="amount" property="a_m_o"/>
+        <columnOverride column="apartmentname" property="a_m_n_a"/>
+        <columnOverride column="apartmentaddress" property="a_m_a_d"/>
+        <columnOverride column="days" property="d_a_s"/>
+        <columnOverride column="introduce" property="i_n_t"/>
+        <columnOverride column="atype" property="a_t_y"/>
+        <columnOverride column="preferential" property="p_r_e"/>
+        <columnOverride column="ctime" property="c_t"/>
+        <columnOverride column="geohash" property="g_e_o"/>
+        <columnOverride column="lid" property="l_i_d"/>
+        <columnOverride column="lng" property="l_n_g"/>
+        <columnOverride column="lat" property="l_a_t"/>
+    </table>
+    
+    <table tableName="en_room_detail" domainObjectName="RoomDetail"
+    	enableSelectByExample="false"  
+        enableDeleteByExample="false"  
+        enableCountByExample="false"  
+        enableUpdateByExample="false">
+        <property name="rootClass" value="com.dicp.web.from.BaseVo"/>
+        <columnOverride column="rdid" property="r_d_i"/>
+        <columnOverride column="roomno" property="r_o_n"/>
+        <columnOverride column="roominfo" property="r_o_i"/>
+        <columnOverride column="rbiid" property="r_b_i"/>
+    </table>
+    
+    <table tableName="en_room_pic_info" domainObjectName="PicInfo"
+    	enableSelectByExample="false"  
+        enableDeleteByExample="false"  
+        enableCountByExample="false"  
+        enableUpdateByExample="false">
+        <property name="rootClass" value="com.dicp.web.from.BaseVo"/>
+        <columnOverride column="rpiid" property="r_p_i"/>
+        <columnOverride column="rbiid" property="r_b_i"/>
+        <columnOverride column="url" property="u_r_l"/>
+        <columnOverride column="rptype" property="r_p_t"/>
+    </table>
+    
+    <table tableName="en_school_dic" domainObjectName="SchoolDic"
+    	enableSelectByExample="false"  
+        enableDeleteByExample="false"  
+        enableCountByExample="false"  
+        enableUpdateByExample="false">
+        <property name="rootClass" value="com.dicp.web.from.BaseVo"/>
+        <columnOverride column="sdid" property="s_d_i"/>
+        <columnOverride column="cdid" property="c_d_i"/>
+        <columnOverride column="scname" property="s_c_n"/>
+    </table>
+    
+    <table tableName="en_user_order" domainObjectName="Order"
+    	enableSelectByExample="false"  
+        enableDeleteByExample="false"  
+        enableCountByExample="false"  
+        enableUpdateByExample="false">
+        <property name="rootClass" value="com.dicp.web.from.BaseVo"/>
+        <columnOverride column="uid" property="u_i"/>
+        <columnOverride column="rbiid" property="r_b_i"/>
+        <columnOverride column="ctime" property="c_t"/>
+        <columnOverride column="otype" property="o_t_y"/>
+    </table>
+    
+    <table tableName="en_user" domainObjectName="User"
+    	enableSelectByExample="false"  
+        enableDeleteByExample="false"  
+        enableCountByExample="false"  
+        enableUpdateByExample="false">
+        <property name="rootClass" value="com.dicp.web.from.BaseVo"/>
+        <columnOverride column="uid" property="u_i"/>
+        <columnOverride column="phone" property="p_h_o"/>
+        <columnOverride column="password" property="p_w_d"/>
+        <columnOverride column="email" property="e_m_a"/>
+        <columnOverride column="ucountry" property="u_c_o_y"/>
+        <columnOverride column="utype" property="u_t_y"/>
+        <columnOverride column="ustatus" property="u_s_t"/>
+        <columnOverride column="ctime" property="c_t"/>
+        <columnOverride column="logintime" property="l_t"/>
+    </table>
+    <table tableName="en_news" domainObjectName="News"
+    	enableSelectByExample="false"  
+        enableDeleteByExample="false"  
+        enableCountByExample="false"  
+        enableUpdateByExample="false">
+        <property name="rootClass" value="com.dicp.web.from.BaseVo"/>
+        <columnOverride column="nid" property="n_i_d"/>
+        <columnOverride column="title" property="t_i_t"/>
+        <columnOverride column="intro" property="i_n_t"/>
+        <columnOverride column="content" property="c_o_n"/>
+        <columnOverride column="pushtime" property="p_u_t"/>
+        <columnOverride column="ctime" property="c_t"/>
+        <columnOverride column="ntype" property="n_t_y"/>
+        <columnOverride column="isdel" property="i_s_d"/>
+        <columnOverride column="diid" property="d_i_i"/>
+        <columnOverride column="district" property="d_i_s"/>
+    </table> 
+    
+    <table tableName="en_verification_code" domainObjectName="VerificationCode"
+    	enableSelectByExample="false"  
+        enableDeleteByExample="false"  
+        enableCountByExample="false"  
+        enableUpdateByExample="false">
+        <property name="rootClass" value="com.dicp.web.from.BaseVo"/>
+        <columnOverride column="vcid" property="v_c_i"/>
+        <columnOverride column="phone" property="p_h_o"/>
+        <columnOverride column="ctime" property="c_t"/>
+        <columnOverride column="vcode" property="v_c"/>
+    </table>
+    
+   <table tableName="en_manager_log" domainObjectName="ManagerLog"
+    	enableSelectByExample="false"  
+        enableDeleteByExample="false"  
+        enableCountByExample="false"  
+        enableUpdateByExample="false"> 
+        <property name="rootClass" value="com.dicp.web.from.BaseVo"/>
+        <columnOverride column="mlid" property="m_l_i"/>
+        <columnOverride column="loginname" property="l_o_n"/>
+        <columnOverride column="aid" property="a_i"/>
+        <columnOverride column="mtime" property="m_t"/>
+        <columnOverride column="mtable" property="m_t_a"/>
+        <columnOverride column="mcontent" property="m_c_o"/>
+    </table>  
+    
+  </context>
+</generatorConfiguration>

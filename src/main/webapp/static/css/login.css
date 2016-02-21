@@ -1,0 +1,42 @@
+@charset "utf-8";
+/* CSS Document */
+.mainnv{border-bottom:1px solid #e8e8e8;margin:0 0 20px;}
+
+button,input[type="button"],input[type="submit"],input[type="reset"],a.button{height:42px;line-height:42px;}
+
+.login-forms{display:inline-block; vertical-align:top;width:545px;margin:0 20px 40px 0;}
+.login-siders{display:inline-block; vertical-align:top;width:410px;padding:0 0 0 20px;background:url(../images/login-sider-bg.png)  no-repeat center left;border-radius:15px;}
+	
+	h1{margin-bottom:20px;padding:0 20px;font:14px/31px "微软雅黑";color:#2894FF;border-bottom:1px solid #ddd;}
+		h1 span{display:inline-block;padding:0 20px;margin:0 0 -1px -20px;background:url(../images/login-h1-bg.png) no-repeat bottom center;}
+
+	table.login-table{width:auto;}
+		.login-table th,.login-table td{vertical-align:middle;}
+		.login-table input[type="text"],.login-table input[type="password"]{height:38px;width:269px;border:1px solid #ccc;border-radius:3px;vertical-align:middle;padding:0 0 0 5px;}
+			.login-table input[type="text"].half{width:124px;}
+			.login-table label{display:inline-block;position:relative;margin:25px 0;width:246px;}
+				.login-table label a{color:#2894FF;}
+				.login-table label a.align_right{position:absolute;right:0;}
+		
+		.login-siders p,li,li a{color:#999;}
+			.login-siders p{padding:0 20px;}
+				.login-siders p strong{color:#FF9226;}
+			.login-siders li{ list-style: inside;}
+	
+		 .login-forms .gray,a.gray{width:141px;padding:0;color:#999;border:1px solid #ccc;background:#f7f7f7;vertical-align:middle;}
+		.full-btn{width:272px;}
+		.long-btn{width:250px;}
+		.space-btn,a.space-btn{color:#5A94FC;border:1px solid #5A94FC;background:none;}
+		
+		input[type="text"].error,input[type="password"].error{border:1px solid #f00;}
+		label.error{width:auto;margin:0 15px;vertical-align:middle;font-weight:bold;color:#ea5200;}
+		
+		.validate{ text-align:center;font-weight:bold;color:#ea5200;}
+		
+.abouts{padding:37px 0;background:#f2f2f2;}
+	.abouts .content{display:table;width:auto;}
+		.six-colomns{display:table-cell;vertical-align:top; width:250px;padding:0 0 0 100px;}
+		/*.long{width:190px;}*/
+			h3{font:bold 16px/1 "微软雅黑";}
+			.six-colomns p,.six-colomns a{display:block;margin:3px 0;}
+			.long a{display:inline-block; vertical-align:middle;}

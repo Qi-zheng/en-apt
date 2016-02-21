@@ -1,0 +1,32 @@
+.mainnv{border-bottom:1px solid #e8e8e8;margin:0 0 20px;}
+
+.bannners{ background:#fff;}
+	.top_movie{width:950px;margin:0 auto;padding:30px 0;}
+		.top_movie h1,.top_movie p{margin:0 590px 0 0;text-align:center;}
+			.top_movie h1{color:#59264E;font-size:30px;font-weight:normal;padding:40px 0 10px;}
+			.top_movie p{color:#6C87D3;font-size:14px;padding:10px;}
+		.top_movie #video_1,.top_movie object{float:right;}
+.clear{clear:both;}		
+
+.about_nv{ background:#0BC4B2;height:53px;left:0;right:0;}
+	.about_nv .inner{width:1000px;margin:0 auto;}
+		.about_nv .inner a{display:inline-block;margin:0 70px 0 0;color:#fff;font-size:16px;line-height:53px;}
+		
+		
+.about_body{background:#F2F2F2;}
+	.list_about{width:940px;margin:0 auto;padding:30px 30px 50px;background:url(../images/list_about_bg.png) repeat-x bottom center #fff;}
+		.list_about h1{color:#13C4B1;font-size:30px;font-weight:normal;text-align:center;}
+		.list_about p{color:#13C4B1;font-size:14px;margin:20px;text-indent:2em;text-height:1.5;}
+		
+	.list_co-operating{width:940px;margin:30px auto;padding:30px;background:#fff;}
+		.list_co-operating h1,.list_co-operating p{text-align:center;}
+		.list_co-operating h1{font-size:30px;margin:0 0 50px;font-weight:normal;}
+			.list_co-operating img{vertical-align:middle;margin:0 30px;}
+	.list_co-operating{width:940px;margin:20px auto auto auto;padding:30px;background:#fff;}
+	
+	.list_team{width:1000px;margin:50px auto 0;}
+		.list_team h1{font-size:30px;font-weight:normal;text-align:center;}
+		.list_team .os{background:#fff;width:226px;height:414px;margin:30px 22px;padding:30px;display:inline-block;text-align:center;}
+			.list_team .os h2{margin:10px 0 5px;font-size:20px;}
+			.list_team .os h3{margin:0 0 10px;font-size:16px;color:#5AC037;}
+			.list_team .os p{background:#A7A4B3;padding:30px;height:100px;font-size:16px;color:#fff;}

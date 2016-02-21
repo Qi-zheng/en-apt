@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+
+<decorators defaultdir="/WEB-INF/layouts/">
+	<excludes>
+		<pattern>/static/*</pattern>
+        <pattern>/obsolete*</pattern>
+		<pattern>/desired/scheme/detail/*</pattern>
+		<pattern>/ideal/scheme/detail/*</pattern>
+        <pattern>/user/register/agreement*</pattern>
+	</excludes>
+
+	<decorator name="default" page="default.jsp">
+		<pattern>/*</pattern>
+	</decorator>
+
+    <decorator name="account" page="account.jsp">
+        <pattern>/account/**</pattern>
+        <pattern>/desired/create*</pattern>
+        <pattern>/desired/change*</pattern>
+        <pattern>/ideal/create*</pattern>
+        <pattern>/ideal/change*</pattern>
+    </decorator>
+</decorators>

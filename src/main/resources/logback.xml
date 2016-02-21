@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<configuration debug="false">
+  <property name="log.dir" value="logs" /> 
+  <appender name="console" class="ch.qos.logback.core.ConsoleAppender">
+    <encoder>
+      <pattern>%d{HH:mm:ss.SSS} |-%-5level in %logger{36} - %msg%n</pattern>
+    </encoder>
+  </appender>
+  
+  <appender name="E" class="ch.qos.logback.core.rolling.RollingFileAppender">
+    <Append>true</Append>
+    <File>${log.dir}/bpm.log</File>
+    <rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
+	        <fileNamePattern>${log.dir}/pcitc-jdp.%d{yyyy-MM-dd}.log</fileNamePattern>
+	</rollingPolicy>
+    <encoder>
+      <pattern>%d{HH:mm:ss.SSS} |-%-5level in %logger{36} - %msg%n</pattern>
+    </encoder>
+  </appender>
+  
+  <appender name="D" class="ch.qos.logback.core.rolling.RollingFileAppender">
+    <Append>true</Append>
+    <File>${log.dir}/bpm-error.log</File>
+    <rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
+	        <fileNamePattern>${log.dir}/pcitc-jdp-error.%d{yyyy-MM-dd}.log</fileNamePattern>
+	</rollingPolicy>
+    <encoder>
+      <pattern>%d{HH:mm:ss.SSS} |-%-5level in %logger{36} - %msg%n</pattern>
+    </encoder>
+    <filter class="ch.qos.logback.classic.filter.ThresholdFilter">
+      <level>ERROR</level>
+    </filter>
+  </appender>
+  
+  <!--log4jdbc -->
+  <logger name="jdbc.sqltiming" level="INFO"/>
+  
+  <logger name="com.dicp" level="DEBUG"/>
+  
+  
+  <logger name="com.ibatis" level="DEBUG"/>
+  <logger name="com.ibatis.common.jdbc.SimpleDataSource" level="DEBUG"/>
+  <logger name="org.apache.ibatis.jdbc.ScriptRunner" level="DEBUG"/>
+  <logger name="com.ibatis.sqlmap.engine.impl.SqlMapClientDelegate" level="DEBUG"/>
+
+  <logger name="org.activiti.engine.impl.persistence.entity" level="DEBUG"/>
+  
+  <logger name="java.sql.Connection" level="DEBUG"/>
+  <logger name="java.sql.Statement" level="DEBUG"/>
+  <logger name="java.sql.PreparedStatement" level="DEBUG"/>
+  <logger name="java.sql.ResultSet" level="DEBUG"/>
+  
+  <root level="error">
+    <appender-ref ref="console"/>
+<!--     <appender-ref ref="E"/> 
+    <appender-ref ref="D"/>-->
+  </root>
+</configuration>

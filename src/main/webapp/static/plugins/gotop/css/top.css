@@ -1,0 +1,18 @@
+/* CSS Document */
+.totop {
+    position: fixed;
+    z-index: 999;
+    right: 25px;
+    bottom: 25px;
+    display: block;
+    width: 26px;
+    height: 62px;
+    background: url(../images/rocket.png) no-repeat 0 0;
+    -webkit-transition: all 0.2s ease-in-out;
+    -moz-transition: all 0.2s ease-in-out;
+    transition: all 0.2s ease-in-out;
+}
+
+.totop:hover {
+    background: url(../images/rocket.png) no-repeat 0 -62px;
+}
